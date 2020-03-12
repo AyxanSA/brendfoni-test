@@ -2,22 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400");
 @import "vendors/bootstrap";
 @import "molecules/sprite";
+//fonts
+@import "fonts/stylesheet.css";
 
-h1 {
-    font-family: 'Roboto', sans-serif;
-}
+// common styles
+@import "common/header";
+@import "common/general"
 
 
-// Sprite Icons
-
-.icon {
-  display: inline-block;
-
-  &-hello {
-    @include sprite($hello);
-  }
-
-  &-world {
-    @include sprite($world);
-  }
-}
