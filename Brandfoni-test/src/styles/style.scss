@@ -7,6 +7,11 @@
 
 // common styles
 @import "common/header";
-@import "common/general"
+@import "common/general";
+@import "section-single-items/header-single.scss";
 
+//section 
+@import "section/section.scss";
+@import "section-single-items/section-category.scss";
+@import "section-single-items/section-search.scss";
 

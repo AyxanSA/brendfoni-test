@@ -1,4 +1,5 @@
 #header {
+  z-index: 2;
   background-color: #0e86c8;
   padding: 5px 0;
   .header-contact {
@@ -23,6 +24,7 @@
 
 //search header
 #header-search {
+  z-index: 900;
   padding: 30px 0;
   border-bottom: 1px solid #9d9d9d;
   background-color: #ffffff;
@@ -154,6 +156,18 @@
       position: relative;
       .user-register,
       .user-unregister {
+        z-index: 2;
+        transition: 0.5s;
+        animation-name: animateUser;
+        animation-duration: 0.5s;
+        @keyframes animateUser {
+          0% {
+            margin-top: 30px;
+          }
+          100% {
+            margin-top: 15px;
+          }
+        }
         margin-top: 15px;
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.11);
         background-color: #ffffff;
@@ -161,18 +175,17 @@
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-        z-index: 300;
-        // display: none;
+        display: none;
         width: max-content;
-        h5{
-            font-size: 14px;
-            font-weight: 900;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #0e86c8;
-            margin: 10px 0;
+        h5 {
+          font-size: 14px;
+          font-weight: 900;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #0e86c8;
+          margin: 10px 0;
         }
         a {
           display: flex;
@@ -185,14 +198,16 @@
           line-height: normal;
           letter-spacing: normal;
           color: #363636;
-          &:hover svg path{
-
-              transform: .5s;
-              fill: #0e86c8;
+          &:hover svg path {
+            transform: 0.5s;
+            fill: #0e86c8;
           }
-        p{
+          &:hover p {
+            color: #0e86c8;
+          }
+          p {
             margin-left: 15px;
-        }
+          }
         }
         button {
           font-size: 12px;
@@ -205,10 +220,10 @@
           color: #0e86c8;
           padding: 5px 15px;
           background-color: transparent;
-          &:hover{
-              transition: .5s;
-              color: #135d85;
-              border: 1px solid #135d85;
+          &:hover {
+            transition: 0.5s;
+            color: #135d85;
+            border: 1px solid #135d85;
           }
         }
         .blue-btn {
@@ -217,11 +232,11 @@
           padding: 5px;
           background-color: #0e86c8;
           margin-top: 20px;
-          &:hover{
-            transition: .5s;
+          &:hover {
+            transition: 0.5s;
             color: white;
             border: 1px solid #5498bd;
-        }
+          }
         }
       }
     }
@@ -254,6 +269,74 @@
           }
         }
       }
+    }
+    // .user-basket{
+    //   .basket-info{
+
+    //   }
+    // }
+  }
+}
+
+// header menu
+
+#header-menu {
+  background-color: #ffffff;
+  padding: 20px 0;
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 20px;
+    .menu-drop {
+      .menu-kategory {
+        transform: 0.5s;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        position: relative;
+        &::after {
+          transition: 0.5s;
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          height: 4px;
+          right: 50%;
+          width: 0;
+          background-color: #0e86c8;
+        }
+        &::before {
+          transition: 0.5s;
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          height: 4px;
+          right: 50%;
+          width: 0;
+          background-color: #0e86c8;
+        }
+        &:hover {
+          color: #0e86c8;
+          &::after {
+            right: 50%;
+            width: 50%;
+          }
+          &::before {
+            left: 50%;
+            right: 0;
+            width: 50%;
+          }
+        }
+      }     
+    }
+    &:hover .subnav-content {
+      visibility: visible;
     }
   }
 }

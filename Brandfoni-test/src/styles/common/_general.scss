@@ -27,3 +27,13 @@ input{
     padding: 0;
   line-height: 0;
 }
+
+.layer{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #16161662;
+  display: none;
+}
