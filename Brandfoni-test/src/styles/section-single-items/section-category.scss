@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     a {
+      margin-right: 30px;
       display: flex;
       font-size: 16px;
       font-weight: 300;
@@ -14,26 +15,36 @@
       line-height: normal;
       letter-spacing: normal;
       color: #000000;
-      .next-icon {
-        width: 24px;
-        height: 24px;
-        svg {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          path {
-            fill: #bcbcbc;
-          }
-        }
+      position: relative;
+   
+      &::after{
+        transform: rotate(45deg);
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 40%;
+        border: 1px solid #bcbcbc;
+        width: 8px;
       }
+      &::before{
+        transform: rotate(-45deg);
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 60%;
+        border: 1px solid #bcbcbc;
+        width: 8px;
+      }
+   
       &:last-child {
         font-weight: 500;
-       .next-icon{
-           display: none;          
-       }
+        &::after {
+          display: none;
+        }
+        &::before {
+          display: none;
+        }
       }
     }
-
-   
   }
 }

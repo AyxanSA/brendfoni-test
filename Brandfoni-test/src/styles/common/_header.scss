@@ -2,6 +2,7 @@
   z-index: 2;
   background-color: #0e86c8;
   padding: 5px 0;
+  
   .header-contact {
     display: flex;
     justify-content: flex-end;
@@ -65,6 +66,9 @@
         }
         &:focus {
           outline: none;
+          .search-result{
+            display: block;
+          }
         }
       }
       button {
@@ -89,6 +93,7 @@
       }
     }
     .search-result {
+      z-index: 3;
       transition: all 0.7s;
       margin-top: 20px;
       position: absolute;
@@ -283,13 +288,15 @@
 #header-menu {
   background-color: #ffffff;
   padding: 20px 0;
+
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12);
   .menu-list {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin-right: 20px;
     .menu-drop {
-      .menu-kategory {
+      .menu-category {
         transform: 0.5s;
         display: block;
         font-size: 16px;
