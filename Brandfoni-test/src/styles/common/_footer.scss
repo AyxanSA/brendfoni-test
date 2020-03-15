@@ -1,0 +1,112 @@
+#footer {
+    background-color: #111111;
+    border-bottom: solid 1px #2e2e2e;
+    .footerLogo {
+      display: block;
+      width: 120px;
+      height: 50px;
+      margin: 30px 0;
+      svg {
+        object-position: left;
+        width: 100%;
+        height: 100%;
+        path {
+          fill: #fefefe;
+        }
+      }
+    }
+    .sosMedia {
+      width: 120px;
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      a{
+          &:hover{
+              svg{
+                  path{
+                      fill: white;
+                  }
+              }
+          }
+      }
+    }
+    .mobApps {
+      padding: 50px 0;
+      h4 {
+        padding: 20px 0;
+        font-family: Avenir;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f6f6f6;
+      }
+    }
+    .about {
+      margin: 30px 0;
+      p,
+      h5 {
+        padding: 20px 0;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f6f6f6;
+      }
+      ul {
+        li {
+          padding: 10px 0;
+          list-style: none;
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: normal;
+            color: #ebebeb;
+          }
+        }
+      }
+    }
+  }
+  
+  #contact-footer {
+    .row{
+      align-items: center;
+    }
+    background-color: #111111;
+    .footerLast {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin-right: 50px;
+      li {
+        a{
+          padding: 20px 0;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #ebebeb;
+          text-decoration: none;
+        }
+       
+      }
+    }
+    .visa {   
+      display: flex;
+      justify-content: flex-end;
+      .imgs {
+        &:hover{
+          text-decoration: none;
+        }
+        padding: 20px 0;
+      }
+    }
+  }
+  

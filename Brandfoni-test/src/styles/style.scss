@@ -9,6 +9,7 @@
 @import "common/header";
 @import "common/general";
 @import "section-single-items/header-single.scss";
+@import "common/footer";
 
 //section 
 @import "section/section.scss";
@@ -16,4 +17,10 @@
 @import "section-single-items/section-search.scss";
 @import "section-single-items/content.scss";
 @import "section-single-items/content-single-item.scss";
+@import "section-single-items/last-looked.scss";
+@import "section-single-items/carousel-item.scss";
+@import "section-single-items/famous-brends.scss";
 
+// owl carusel
+@import "/owl/assets/owl.carousel.min.css";
+@import "/owl/assets/owl.theme.default.min.css";

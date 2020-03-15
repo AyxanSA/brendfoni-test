@@ -1,5 +1,6 @@
 'use strict';
 import 'bootstrap/dist/js/bootstrap';
+import 'owl.carousel';
 
 $(function () {
   $('#alert').on('click', e => alert('clicked'))
@@ -37,3 +38,22 @@ for (var i = 0; i < marka.length; i++) {
   });
 }
 
+
+var hearts = document.getElementsByClassName('heart')
+
+for (var i = 0; i < hearts.length; i++) {
+  hearts[i].addEventListener("click", function () {
+    $(this).siblings().removeClass('active');
+    $(this).toggleClass("active");
+  });
+}
+
+$(document).ready(function(){
+  $("#last-looked .owl-carousel").owlCarousel({
+    loop: true,
+    items: 6,
+    nav:false,
+    autoplay: false,
+    dots: false,
+  });
+});
